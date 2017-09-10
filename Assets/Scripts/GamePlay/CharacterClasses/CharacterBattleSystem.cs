@@ -12,11 +12,13 @@ public class CharacterBattleSystem : MonoBehaviour
 
     private void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetMouseButton(0))
         {
             Attack();
         }
-	}
+#endif
+    }
 
     private void Attack()
     {

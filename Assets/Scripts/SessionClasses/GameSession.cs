@@ -20,6 +20,10 @@ public class GameSession : MonoBehaviour
         {
             OnPlayerDied.Invoke();
         }
+    }
+
+    public void Restart()
+    {
         SceneManager.LoadScene("Game");
     }
 }

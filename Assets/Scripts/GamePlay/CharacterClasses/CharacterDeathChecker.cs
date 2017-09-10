@@ -7,6 +7,7 @@ public class CharacterDeathChecker : MonoBehaviour
 
     public float _timeToDeathDuration;
     public float _distanceThreshold;
+    public float _killY = -5.0f;
 
     private void Start()
     {
@@ -15,13 +16,20 @@ public class CharacterDeathChecker : MonoBehaviour
 
     private void Update()
     {
-		if (_prevPosition == transform.position)
+        if (transform.position.y < _killY)
+        {
+            GameSession.Instance.PlayerDied();
+            gameObject.SetActive(false);
+        }
+
+        if (_prevPosition == transform.position)
         {
             _timeToDeath += Time.deltaTime;
 
             if (_timeToDeath > _timeToDeathDuration)
             {
                 GameSession.Instance.PlayerDied();
+                enabled = false;
             }
         }
         else
