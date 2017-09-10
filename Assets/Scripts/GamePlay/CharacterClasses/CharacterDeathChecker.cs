@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CharacterDeathChecker : MonoBehaviour
 {
@@ -22,7 +21,7 @@ public class CharacterDeathChecker : MonoBehaviour
 
             if (_timeToDeath > _timeToDeathDuration)
             {
-                SceneManager.LoadScene("Game");
+                GameSession.Instance.PlayerDied();
             }
         }
         else
@@ -37,7 +36,7 @@ public class CharacterDeathChecker : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-
+            GameSession.Instance.PlayerDied();
         }
     }
 }

@@ -10,7 +10,7 @@ public class KillY : MonoBehaviour
     {
 		if (transform.position.y < _killY)
         {
-            SceneManager.LoadScene("Game");
+            GameSession.Instance.PlayerDied();
         }
 	}
 }

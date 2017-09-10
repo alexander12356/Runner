@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114279929875313954}
   - component: {fileID: 114361527887999282}
   - component: {fileID: 114548282938431926}
+  - component: {fileID: 114284343128327868}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -150,6 +151,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _killY: -5
+--- !u!114 &114284343128327868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618494576087314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bf886f0a0bdd34a9fe351ffea8f58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CircleCastOrigin: {x: 0, y: 0}
+  Radius: 2.5
 --- !u!114 &114361527887999282
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,6 +12,8 @@ public class Template : MonoBehaviour
     private float _deathDistance = 0.0f;
     [SerializeField]
     private Coin[] _coinList;
+    [SerializeField]
+    private Enemy[] _enemyList;
 
     public Transform NextTemplateTransform
     {
@@ -34,15 +36,19 @@ public class Template : MonoBehaviour
 
     private void OnSpawned()
     {
-        for (int i = 0; i < _coinList.Length; i++)
-        {
-            _coinList[i].gameObject.SetActive(true);
-        }
+        
     }
 
     private void OnDespawned()
     {
-
+        for (int i = 0; i < _coinList.Length; i++)
+        {
+            _coinList[i].gameObject.SetActive(true);
+        }
+        for (int i = 0; i < _enemyList.Length; i++)
+        {
+            _enemyList[i].gameObject.SetActive(true);
+        }
     }
 
     private void Despawn()
