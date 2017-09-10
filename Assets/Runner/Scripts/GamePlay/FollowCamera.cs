@@ -6,7 +6,7 @@ public class FollowCamera : MonoBehaviour
 
     public float Speed;
 
-    private void LateUpdate()
+    private void Update()
     {
         float interpolation = Speed * Time.deltaTime;
 
