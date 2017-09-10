@@ -4,10 +4,16 @@ public class CharacterDeathChecker : MonoBehaviour
 {
     private Vector3 _prevPosition;
     private float _timeToDeath;
+    private CharacterLive _characterLive;
 
     public float _timeToDeathDuration;
     public float _distanceThreshold;
     public float _killY = -5.0f;
+
+    private void Awake()
+    {
+        _characterLive = GetComponent<CharacterLive>();
+    }
 
     private void Start()
     {
@@ -18,8 +24,7 @@ public class CharacterDeathChecker : MonoBehaviour
     {
         if (transform.position.y < _killY)
         {
-            GameSession.Instance.PlayerDied();
-            gameObject.SetActive(false);
+            _characterLive.Death();
         }
 
         if (_prevPosition == transform.position)
@@ -28,8 +33,7 @@ public class CharacterDeathChecker : MonoBehaviour
 
             if (_timeToDeath > _timeToDeathDuration)
             {
-                GameSession.Instance.PlayerDied();
-                enabled = false;
+                _characterLive.Death();
             }
         }
         else
@@ -44,7 +48,7 @@ public class CharacterDeathChecker : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            GameSession.Instance.PlayerDied();
+            _characterLive.Death();
         }
     }
 }
