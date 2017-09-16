@@ -614,9 +614,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4959884319104230}
-  - component: {fileID: 114998053498692984}
   - component: {fileID: 61312187658277486}
   - component: {fileID: 61833840226043020}
+  - component: {fileID: 95722289074801070}
+  - component: {fileID: 114998053498692984}
   m_Layer: 0
   m_Name: Succubus
   m_TagString: Untagged
@@ -2562,6 +2563,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95722289074801070
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426703163875256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f516d1e4371a73c45bb69faa61b4aa2d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114006622180228158
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 114284343128327868}
   - component: {fileID: 114567532214513122}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Hero
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1546,7 +1546,7 @@ Animator:
   m_GameObject: {fileID: 1618494576087314}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c30c7b410737c98489110e1ee1d6ec56, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
